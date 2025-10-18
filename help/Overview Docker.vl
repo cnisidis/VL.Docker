@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="HtcRfgfvtgbLN5MVHig3Bc" LanguageVersion="2025.7.0-0569-gd8eda191f6" Version="0.128">
+  <NugetDependency Id="NHrRUQr3luRMu76Nrn1V42" Location="VL.CoreLib" Version="2025.7.0-0569-gd8eda191f6" />
+  <Patch Id="DBVijqvfAsrMAyfxh3fkKZ">
+    <Canvas Id="MpPPV78XEkXQUK4RkKCn5L" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="CYC7VTtbKgFQZTymhlOrLE">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="RJ220AJ1177N9fwzoDK6HX">
+        <Canvas Id="Lq6eGvfg8sdNtFN2P9MmOd" CanvasType="Group">
+          <Node Bounds="459,280,43,19" Id="IF6Wa2SkEOYNvUQiGhN4Ds">
+            <p:NodeReference LastCategoryFullName="VL.Docker.Client" LastDependency="VL.Docker.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Client (Windows)" />
+            </p:NodeReference>
+            <Pin Id="MIKztLzpHYaOq8GZwPPq5p" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="VnvUVKn254UMJKkUV4mICl" Name="Refresh" Kind="InputPin" />
+            <Pin Id="C2ATvIaPyIvLU8oAhtmVFI" Name="Endpoint" Kind="InputPin" />
+            <Pin Id="JzErzDayIqPNvpG1SrJqIs" Name="Client" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="459,331,97,19" Id="MknEIcBIDUXLWv7DFLNpoc">
+            <p:NodeReference LastCategoryFullName="VL.Docker.Client.Client (Windows)" LastDependency="VL.Docker.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GetContainersList (Async)" />
+            </p:NodeReference>
+            <Pin Id="ATIgsfcaYHgMdsVOcmpVIM" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="U1xYF9Se4KyP8LfBUZKUJX" Name="Client" Kind="InputPin" />
+            <Pin Id="Avqv4T1XIF9LqgplxZ0enI" Name="Start" Kind="InputPin" />
+            <Pin Id="Q2cwIXDoAVaNo8oFOJcpjC" Name="On Finished" Kind="OutputPin" />
+            <Pin Id="KpnyDiY0jN7QWQ8mfqFnlP" Name="Cancel" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Bh0qqJ608pGOi6ztQ7hSQJ" Name="On Exception" Kind="OutputPin" />
+            <Pin Id="J0ijQisiPZRNF3FWFgHuhq" Name="On Cancelled" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="CNWoa0Gctx1QWAsL5TU4Fw" Name="Is Running" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="DxtnlAypQanOltLXprHq1s" Name="Duration" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="Qk20cvj9JwdOH0HP36mOMY" Name="Limit" Kind="InputPin" />
+            <Pin Id="L3erYI0ymSnLzGKQgycv9L" Name="Filters" Kind="InputPin" />
+            <Pin Id="TW978e1VgJ1NyOFTdWbqQc" Name="Set Filters" Kind="InputPin" />
+          </Node>
+          <Pad Id="GtkNCpKVzv6Np6r89wx2Ei" Comment="Start" Bounds="553,300,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="459,520,65,19" Id="NxoYKARiuhPONzPN5RXJ3y">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
+            </p:NodeReference>
+            <Pin Id="NQdUjhAPZTaQQ5QSglr3KY" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="LmJcrWhsD77QSbtrCNYIas" Name="Initial Result" Kind="InputPin" IsHidden="true" />
+            <Pin Id="EOJBVixeOFyLecqjUTP2BL" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="OmnbD0f4173LYMJZsJez50" Name="Reset" Kind="InputPin" />
+            <Pin Id="PtHW5nxpOo0PGhtK22nuhe" Name="Output" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="EOLBABtv2LNN0yHkorkyF8" Name="Value" Kind="OutputPin" />
+            <Pin Id="A4eIPyjuE1gOmS13jSvCmp" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Pad Id="DW6fs8GpuWoPALoMCRlTzl" Comment="" Bounds="461,590,426,81" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="STso4RqxpwSMh8W6vHmerc" Comment="Refresh" Bounds="406,230,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="551,373,109,134" Id="S8g1kbsP3tXQBkJ02UbFMn">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="ForEach" />
+            </p:NodeReference>
+            <Pin Id="CfbihAYJOfQPczeHrzwNnU" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="SXvEMOYqeJ4M4KhH47QgfV" Name="Messages" Kind="InputPin" />
+            <Pin Id="QZUbaLOgm2ZOPO5M5aam1N" Name="Reset" Kind="InputPin" />
+            <Pin Id="UDgFQ0CY650LP2toN0tIl8" Name="Output" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="VpsozOL6qPdLSdBMvqnp6X" Name="Result" Kind="OutputPin" />
+            <Patch Id="GlzgkAH0bZFPhbCLOFJu0c" ManuallySortedPins="true">
+              <Patch Id="UZ9kYT7AA95PT1S5QhAson" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="FuwIZF2IOJdLWg9KIxqHR8" Name="Update" ManuallySortedPins="true">
+                <Pin Id="JbawD0y6984NL2yYHLwyDO" Name="Input 1" Kind="InputPin" />
+                <Pin Id="KJCebGIoR4sLPyR3NOKtym" Name="Output" Kind="OutputPin" />
+              </Patch>
+              <ControlPoint Id="DUY1sQQn5IzQIx0JquKwN4" Bounds="565,381" />
+              <ControlPoint Id="MJnmzd48UBAN09Z047f3KS" Bounds="565,500" />
+              <Node Bounds="590,440,58,26" Id="C7r9kQ5NGzoM1Dhov7I36Z">
+                <p:NodeReference LastCategoryFullName="System.Console" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="WriteLine" />
+                </p:NodeReference>
+                <Pin Id="PHTSgGcP25hQH4hWKAubMg" Name="Value" Kind="InputPin" />
+                <Pin Id="EPEYLu9V7yeOjDsaiBHlKL" Name="Apply" Kind="InputPin" DefaultValue="True" />
+              </Node>
+              <Node Bounds="563,400,55,19" Id="AunjQqd7KclQCCToCEzdYu">
+                <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <FullNameCategoryReference ID="Primitive.Object" />
+                  <Choice Kind="OperationCallFlag" Name="ToString" />
+                </p:NodeReference>
+                <Pin Id="Igapd7Uc2jvN4lqUFpAHBc" Name="Input" Kind="StateInputPin" />
+                <Pin Id="TRTqm7pqwp5Qc8dFMcO5LM" Name="Result" Kind="OutputPin" />
+              </Node>
+            </Patch>
+          </Node>
+          <Pad Id="O1BstqZMQHjPsumrDiXSIj" Comment="Endpoint" Bounds="553,208,278,15" ShowValueBox="true" isIOBox="true" Value="http://ubuntu-docker.cloudapp.net:4243">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="RdBltHLz6m0O4RxZ5RH4Qm" Comment="Limit" Bounds="653,290,35,15" ShowValueBox="true" isIOBox="true" Value="10">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="DHGoBet4KGZLuMWXRK9Y5O" Bounds="873,450,35,15" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Byte" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="HnVsD4WVlZuNazZSNDTiNu" Bounds="899,480,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Byte" />
+            </p:TypeAnnotation>
+          </Pad>
+        </Canvas>
+        <Patch Id="DuZky7dui6tPxwudZIM5V2" Name="Create" />
+        <Patch Id="G6boIURvgLLMStE0j7ODVq" Name="Update" />
+        <ProcessDefinition Id="MGutD5zFSPzN1lWPDQiIQr">
+          <Fragment Id="BwHOFsRbAeEOJ8NHeqCy5h" Patch="DuZky7dui6tPxwudZIM5V2" Enabled="true" />
+          <Fragment Id="O0xDHfqXSwWOTXK0ySPy5V" Patch="G6boIURvgLLMStE0j7ODVq" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="DewwnWQ967AO2NoFmtVz9Q" Ids="JzErzDayIqPNvpG1SrJqIs,U1xYF9Se4KyP8LfBUZKUJX" />
+        <Link Id="UCBaxzcWcgmOV134EfxImc" Ids="GtkNCpKVzv6Np6r89wx2Ei,Avqv4T1XIF9LqgplxZ0enI" />
+        <Link Id="BjacBuurhsSPmZRm63j6mF" Ids="Q2cwIXDoAVaNo8oFOJcpjC,EOJBVixeOFyLecqjUTP2BL" />
+        <Link Id="SplGMblvy97QKX8vPBWsBl" Ids="EOLBABtv2LNN0yHkorkyF8,DW6fs8GpuWoPALoMCRlTzl" />
+        <Link Id="NMDWKP8ZLOnPPOg8aoAELA" Ids="STso4RqxpwSMh8W6vHmerc,VnvUVKn254UMJKkUV4mICl" />
+        <Link Id="GpiSSHZBlngO29ZUqq2hg6" Ids="JbawD0y6984NL2yYHLwyDO,DUY1sQQn5IzQIx0JquKwN4" IsHidden="true" />
+        <Link Id="VaGxM2bdjhvNTtK5X1pjKz" Ids="MJnmzd48UBAN09Z047f3KS,KJCebGIoR4sLPyR3NOKtym" IsHidden="true" />
+        <Link Id="Jzhn2V7DKt7OF0OSv4QaMd" Ids="Bh0qqJ608pGOi6ztQ7hSQJ,SXvEMOYqeJ4M4KhH47QgfV" />
+        <Link Id="Cs4RCJZrlKsPi5eMZAhKW6" Ids="DUY1sQQn5IzQIx0JquKwN4,Igapd7Uc2jvN4lqUFpAHBc" />
+        <Link Id="N8FVb3JzKDTOEGvY2jvMlJ" Ids="TRTqm7pqwp5Qc8dFMcO5LM,PHTSgGcP25hQH4hWKAubMg" />
+        <Link Id="DfiikROJYq8QHL1VagLblh" Ids="TRTqm7pqwp5Qc8dFMcO5LM,MJnmzd48UBAN09Z047f3KS" />
+        <Link Id="JMnHXdfIBxcLuKvasuKpLK" Ids="RdBltHLz6m0O4RxZ5RH4Qm,Qk20cvj9JwdOH0HP36mOMY" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="OON3rBnroSQPuM6xMfCPik" Location="VL.Docker" Version="0.0.0" />
+</Document>
